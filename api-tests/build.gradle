@@ -1,0 +1,18 @@
+apply plugin: 'java'
+
+ext {
+    juinitVersion = "5.3.8"
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    testImplementation("org.junit.jupiter:junit-jupiter-api:$juinitVersion")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:$juinitVersion")
+}
+
+test {
+
+}
