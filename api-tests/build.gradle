@@ -1,7 +1,7 @@
-apply plugin: 'java'
-
 ext {
     juinitVersion = "5.3.8"
+    restAssuredVersion = "3.1.1"
+    jacksonDatabindVersion = "2.9.5"
 }
 
 repositories {
@@ -9,11 +9,12 @@ repositories {
 }
 
 dependencies {
-    implementation 'io.rest-assured', name: 'rest-assured', version: '3.2.0'
+    implementation "com.fasterxml.jackson.core:jackson-databind:$jacksonDatabindVersion"
+    implementation "io.rest-assured:rest-assured:$restAssuredVersion"
     testImplementation("org.junit.jupiter:junit-jupiter-api:$juinitVersion")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:$juinitVersion")
 }
 
 test {
-
+    useJUnitPlatform()
 }
