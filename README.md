@@ -1,5 +1,5 @@
-# rest-assured-example
-Ecample for REST aPI testing automation
+# Rest-assured-example
+Ecample for REST API testing automation
 Uesed tools:
 - Gradle
 - Rest Assured
