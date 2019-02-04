@@ -6,12 +6,14 @@ buildscript {
     }
     dependencies {
         classpath "io.franzbecker:gradle-lombok:1.14"
+        classpath "io.qameta.allure:allure-gradle:2.6.0"
     }
 }
 
 subprojects {
     apply plugin: 'java'
     apply plugin: "io.franzbecker.gradle-lombok"
+    apply plugin: "io.qameta.allure"
 }
 
 repositories {

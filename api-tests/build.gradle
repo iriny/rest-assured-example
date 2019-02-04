@@ -11,10 +11,26 @@ repositories {
 dependencies {
     implementation "com.fasterxml.jackson.core:jackson-databind:$jacksonDatabindVersion"
     implementation "io.rest-assured:rest-assured:$restAssuredVersion"
+
+    compile group: 'io.qameta.allure', name: 'allure-rest-assured', version: '2.9.0'
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.2.3'
+    compile group: 'ch.qos.logback', name: 'logback-core', version: '1.2.3'
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+
     testImplementation("org.junit.jupiter:junit-jupiter-api:$juinitVersion")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:$juinitVersion")
 }
 
 test {
     useJUnitPlatform()
+}
+
+allure {
+    version = '2.5.0'
+    configuration = 'compile'
+    aspectjweaver = true
+
+    useJUnit5 {
+        version = '2.7.0'
+    }
 }
